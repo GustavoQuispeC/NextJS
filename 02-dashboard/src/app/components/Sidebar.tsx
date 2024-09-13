@@ -2,6 +2,7 @@ import Image from "next/image"
 import { FaReact } from "react-icons/fa"
 import { SidebarMenuItem } from "./SidebarMenuItem"
 import { CiCalculator2 } from "react-icons/ci"
+import { IoFootball } from "react-icons/io5"
 
 
 const menuItems = [
@@ -17,6 +18,12 @@ const menuItems = [
         icon: <CiCalculator2 size={40} />,
         subtitle:'Contador'
     },
+    {
+        path:'/dashboard/pokemons',
+        title:'Pokemons',
+        icon: <IoFootball  size={40} />,
+        subtitle:'Generacio estatica'
+    },
 ]
 
 
@@ -24,7 +31,7 @@ export const Sidebar = () => {
   return (
     <div id="menu"
     style={{width: "400px"}}
-    className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0 h-screen overflow-y-scroll">
+    className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 left-0  overflow-y-scroll">
 
            <div id="logo" className="my-4 px-6">
             <h1 className="flex items-center text-lg md:text-2xl font-bold text-white"><FaReact className="mr-2" /> Dashboard<span className="text-blue-500">v.1</span>.</h1>
