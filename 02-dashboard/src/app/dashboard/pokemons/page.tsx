@@ -1,5 +1,4 @@
-import { PokemonsResponse, PokemosnGrid, SimplePokemon } from "@/pokemons";
-
+import { PokemonsResponse, PokemonsGrid, SimplePokemon } from "@/pokemons";
 
 const getPokemons = async (
   limit = 20,
@@ -13,7 +12,7 @@ const getPokemons = async (
     id: pokemon.url.split("/").at(-2) as string,
     name: pokemon.name,
   }));
-//throw new ('esto es un error de prueba');
+  //throw new ('esto es un error de prueba');
   return pokemons;
 };
 
@@ -22,14 +21,13 @@ export default async function PokemonsPage() {
 
   return (
     <>
-    <div className="flex flex-col">
-      <span className="text-5xl my-2">
-        Listado de Pokemones <small> Estaticos</small>{" "}
-      </span>
+      <div className="flex flex-col">
+        <span className="text-5xl my-2">
+          Listado de Pokemones <small> Estaticos</small>{" "}
+        </span>
 
-      <PokemosnGrid pokemons={pokemons} />
-    </div>
+        <PokemonsGrid pokemons={pokemons} />
+      </div>
     </>
-    
   );
 }
