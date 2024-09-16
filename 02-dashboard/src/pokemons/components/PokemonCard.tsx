@@ -14,9 +14,9 @@ export const PokemonCard = ({ pokemon }:Props) => {
 
 
   return (
-    <div className="mx-auto right-0 mt-2 w-60">
-      <div className="flex flex-col bg-white rounded overflow-hidden shadow-lg">
-        <div className="flex flex-col items-center justify-center text-center p-6 bg-gray-800 border-b">
+    <div className="right-0 mx-auto mt-2 w-60">
+      <div className="flex flex-col overflow-hidden bg-white rounded shadow-lg">
+        <div className="flex flex-col items-center justify-center p-6 text-center bg-gray-800 border-b">
 
           <Image 
               key={ pokemon.id }
@@ -28,24 +28,24 @@ export const PokemonCard = ({ pokemon }:Props) => {
             />
 
 
-          <p className="pt-2 text-lg font-semibold text-gray-50 capitalize">{ name }</p>
+          <p className="pt-2 text-lg font-semibold capitalize text-gray-50">{ name }</p>
           <div className="mt-5">
             <Link
-              href={`dashboard/pokemon/${ id }`}
-              className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
+              href={`dashboard/pokemon/${ name }`}
+              className="px-4 py-2 text-xs font-semibold text-gray-100 border rounded-full"
             >
               Más información
             </Link>
           </div>
         </div>
         <div className="border-b">
-          <Link href="/dashboard/main" className="px-4 py-2 hover:bg-gray-100 flex items-center">
+          <Link href="/dashboard/main" className="flex items-center px-4 py-2 hover:bg-gray-100">
 
               <div className="text-red-600">
                 <IoHeartOutline />
               </div>
               <div className="pl-3">
-                <p className="text-sm font-medium text-gray-800 leading-none">
+                <p className="text-sm font-medium leading-none text-gray-800">
                   No es favorito
                 </p>
                 <p className="text-xs text-gray-500">View your campaigns</p>
