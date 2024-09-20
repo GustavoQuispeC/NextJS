@@ -1,7 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { useDispatch, useSelector } from 'react-redux'
-import { TypedUseSelectorHook } from 'react-redux'
-import { AppDispatch, RootState } from '..';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+
 
 interface CounterState {
     count: number;
@@ -14,15 +13,24 @@ const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
- 
+ addOne(state){
+      state.count += 1;
+ },
+ substractOne(state){
+  if(state.count==0) return;
+      state.count -= 1;
    
-  }
-   
+  },
+  resetCounter(state,action: PayloadAction<number>){
+    if(action.payload<0)action.payload=0;
+      state.count = action.payload;
+    
+},
+  
+}  
 });
 
-export const {} = counterSlice.actions;
+export const { addOne, substractOne,resetCounter } = counterSlice.actions;
 
 export default counterSlice.reducer;
 
-export const useAppDispatch : () => AppDispatch = useDispatch;
-export const useAppSelector : TypedUseSelectorHook<RootState> = useSelector;
