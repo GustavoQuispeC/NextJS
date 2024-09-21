@@ -2,20 +2,20 @@
 
 import { useAppSelector } from "@/store";
 import { PokemonGrid } from "./PokemonGrid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
   
 export const FavoritePokemons = () => {
 
-    const favoritesPokemons = useAppSelector((state) => Object.values(state.pokemons) );
+    const favoritesPokemons = useAppSelector((state) => Object.values(state.pokemons.favorites) );
 
-   const [pokemons, setPokemons] = useState(favoritesPokemons);
+
 
   return (
     // <PokemonGrid 
     // pokemons={favoritesPokemons}/>
-    <PokemonGrid pokemons={pokemons}/>
+    <PokemonGrid pokemons={favoritesPokemons}/>
    
   )
 }
