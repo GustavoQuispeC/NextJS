@@ -43,7 +43,7 @@ export const Sidebar = () => {
       <div id="logo" className="px-6 my-4">
         <h1 className="flex items-center text-lg font-bold text-white md:text-2xl">
           <IoLogoReact className='mr-2' />
-          <span> Dash</span> 
+          <span> Dashboard</span> 
           <span className="text-blue-500">8</span>.
         </h1>
         <p className="text-sm text-slate-500">Manage your actions and activities</p>
@@ -63,7 +63,7 @@ export const Sidebar = () => {
             />
           </span>
           <span className="text-sm font-bold md:text-base">
-            Fernando Herrera
+            Gustavo
           </span>
         </a>
       </div>
