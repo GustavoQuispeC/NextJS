@@ -1,5 +1,7 @@
 import { Navbar } from "@/components";
 
+//!  lrc => layout react component - Snippet
+
 export default function GeneralLayout({
   children,
 }: {
@@ -10,7 +12,7 @@ export default function GeneralLayout({
     <Navbar />
      <main className="flex flex-col items-center p-24">
       <span className="text-lg">
-      <h6>Hola Mundo</h6>
+      <h6>Bienvenidos</h6>
         
       {children}
       </span>
