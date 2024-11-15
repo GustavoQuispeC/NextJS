@@ -8,6 +8,7 @@ interface Props {
 }
 
 //! Generar las rutas estáticas de los primeros 151 pokemons en tiempo de construcción de la aplicación
+//gsp => Generación de rutas estáticas - snipet
 export async function generateStaticParams() {
   const data: PokemonsReponse = await fetch(
     "https://pokeapi.co/api/v2/pokemon?limit=151"
@@ -20,6 +21,9 @@ export async function generateStaticParams() {
   return pokemons;
 }
 
+
+
+//metadata dinámica 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { id, name } = await getPokemon(params.name);
