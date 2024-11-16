@@ -9,7 +9,8 @@ export default async function PokemonsPage() {
   return (
     <div className="flex flex-col">
       <span className="my-2 text-5xl">
-        Pokémons Favoritos <small className="text-blue-500">Global State</small>
+        Pokémons Favoritos{" "}
+        <small className="text-blue-500">Estado Global</small>
       </span>
 
       <FavoritePokemons />
