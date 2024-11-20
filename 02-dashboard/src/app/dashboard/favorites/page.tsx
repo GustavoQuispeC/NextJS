@@ -17,3 +17,5 @@ export default async function PokemonsPage() {
     </div>
   );
 }
+
+//revisar menu principal
